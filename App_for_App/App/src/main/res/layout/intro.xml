@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+
+    android:orientation="vertical" >
+    <!-- ViewPager -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/button">
+        <android.support.v4.view.ViewPager
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/viewPager" />
+        <!-- Footer -->
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:text="Skip!!"
+            android:id="@+id/skip"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:background="#3498DB"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+
+
+        <include layout="@layout/footer"
+            android:layout_width="fill_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="80dp"
+            android:id="@+id/include2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Slide to finish the Intro"
+            android:id="@+id/textView2"
+            android:textSize="25dp"
+            android:layout_marginTop="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

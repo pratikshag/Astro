@@ -1,0 +1,177 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/img_head"
+        android:contentDescription="layer 1 of main Activity"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/layer1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="42dp" />
+
+
+    <LinearLayout
+        android:id="@+id/result_data_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/img_head"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="test" />
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/wheelview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bg"
+        android:layout_below="@+id/img_head">
+
+        <com.lukedeighton.wheelview.WheelView
+            android:id="@+id/wheelview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:repeatItems="true"
+            app:rotatableWheelDrawable="true"
+            app:selectionAngle="270.0"
+            app:selectionPadding="3dp"
+            app:wheelDrawable="@drawable/wheels"
+            app:wheelItemAnglePadding="10"
+            app:wheelItemCount="12"
+            app:wheelItemRadius="25dp"
+            app:wheelPadding="9dp"
+            app:wheelPosition="top"
+            app:wheelRadius="135dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="44dp" />
+
+
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageButton
+                android:id="@+id/img_btn_daily_horoscope_non"
+                android:contentDescription="button to know your daily predection"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/daily_horoscope_non" />
+
+
+            <ImageButton
+                android:id="@+id/img_btn_weekly_non"
+                android:contentDescription="button to know your mood weekly"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/weekly_non" />
+
+            <ImageButton
+                android:id="@+id/img_btn_monthly_non"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/monthly_non"
+                android:visibility="gone"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/zodiac_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:shadowColor="@color/cyan_a200"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="5"
+            android:text="Aries"
+            android:textColor="@color/white"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/option_selection_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/cyan_a200"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="5"
+            android:text="Horoscope"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="normal"
+            android:layout_above="@+id/button_layout"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/img_btn_mood_non"
+        android:layout_width="wrap_content"
+        android:contentDescription="button to now your mood in every 2 hours"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mood_non"
+        android:layout_marginTop="27dp"
+        android:layout_alignTop="@+id/img_head"
+        android:layout_toRightOf="@+id/result_data_layout"
+        android:layout_toEndOf="@+id/result_data_layout"
+        android:layout_marginLeft="32dp"
+        android:layout_marginStart="32dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        android:id="@+id/mood"
+        android:layout_alignBottom="@+id/img_btn_mood_non"
+        android:layout_toRightOf="@+id/img_btn_mood_non"
+        android:layout_toEndOf="@+id/img_btn_mood_non" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id">
+    </com.google.android.gms.ads.AdView>
+
+
+    <!--
+            app:wheelPosition="bottom"
+                    app:wheelOffsetY="60dp"
+
+        app:wheelItemTransformer="com.lukedeighton.wheelview.transformer.SimpleItemTransformer"
+
+    -->
+</RelativeLayout>

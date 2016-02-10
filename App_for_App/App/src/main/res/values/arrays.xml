@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="signtypelist">
+        <item>@string/signtype1</item>
+        <item>@string/signtype2</item>
+        <item>@string/signtype3</item>
+        <item>@string/signtype4</item>
+        <item>@string/signtype5</item>
+        <item>@string/signtype6</item>
+        <item>@string/signtype7</item>
+        <item>@string/signtype8</item>
+        <item>@string/signtype9</item>
+        <item>@string/signtype10</item>
+        <item>@string/signtype11</item>
+        <item>@string/signtype12</item>
+
+    </string-array>
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:fillViewport="false">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <include layout="@layout/window_title"
+            android:id="@+id/include" />
+
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="56dp"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp">
+
+
+            <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="    Send us an Email"
+            android:textSize="15dp"
+            android:id="@+id/rateus"
+            android:gravity="left|center_vertical"
+            android:background="@null"
+            android:textColor="#000"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="81dp"
+                android:textAllCaps="false"
+                android:drawableLeft="@drawable/opened4"
+                android:drawableRight="@drawable/keyboard53"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="    Call Us"
+            android:textSize="15dp"
+            android:gravity="left|center_vertical"
+            android:id="@+id/linkus"
+
+                android:textAllCaps="false"
+                android:drawableLeft="@drawable/phone325"
+                android:drawableRight="@drawable/keyboard53"
+            android:background="@null"
+            android:textColor="#000"
+            android:layout_below="@+id/rateus"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="    FAQs"
+            android:textSize="15dp"
+            android:gravity="left|center_vertical"
+            android:id="@+id/faqs"
+            android:background="@null"
+            android:textAllCaps="false"
+            android:drawableLeft="@drawable/question30"
+            android:drawableRight="@drawable/keyboard53"
+            android:textColor="#000"
+            android:layout_below="@+id/linkus"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/black" />
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_ad_unit_id">
+            </com.google.android.gms.ads.AdView>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</ScrollView>

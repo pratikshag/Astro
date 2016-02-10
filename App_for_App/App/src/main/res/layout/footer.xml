@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="400dp"
+    android:padding="15dip"
+    android:layout_gravity="bottom"
+    android:orientation="vertical"
+    >
+
+    <View android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/button"
+        android:id="@+id/btn1"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="120dp"/>
+    <View android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/button"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="140dp"
+        android:id="@+id/btn2" />
+    <View android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/button"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="160dp"
+        android:id="@+id/btn3" />
+    <View android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/button"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="180dp"
+        android:id="@+id/btn4" />
+    <View android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/button"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="200dp"
+        android:id="@+id/btn5" />
+</RelativeLayout>
